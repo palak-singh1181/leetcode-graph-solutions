@@ -23,18 +23,18 @@ public class FindCenterOfStarGraph {
         FindCenterOfStarGraph obj = new FindCenterOfStarGraph();
 
         int[][] edges1 = {
-                {1, 2},
-                {2, 3},
-                {4, 2}
+                { 1, 2 },
+                { 2, 3 },
+                { 4, 2 }
         };
 
         System.out.println(obj.findCenter(edges1));
 
         int[][] edges2 = {
-                {1, 2},
-                {5, 1},
-                {1, 3},
-                {1, 4}
+                { 1, 2 },
+                { 5, 1 },
+                { 1, 3 },
+                { 1, 4 }
         };
 
         System.out.println(obj.findCenter(edges2));
