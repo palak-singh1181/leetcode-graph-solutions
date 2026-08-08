@@ -1,0 +1,39 @@
+
+import java.util.*;
+
+public class PascalsTriangle {
+
+    public static List<List<Integer>> generate(int numRows) {
+
+        List<List<Integer>> result = new ArrayList<>();
+
+        for (int i = 0; i < numRows; i++) {
+
+            List<Integer> row = new ArrayList<>();
+
+            for (int j = 0; j <= i; j++) {
+
+                if (j == 0 || j == i) {
+                    row.add(1);
+                } else {
+                    row.add(result.get(i - 1).get(j - 1) + result.get(i - 1).get(j));
+                }
+            }
+
+            result.add(row);
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+
+        int numRows = 5;
+
+        List<List<Integer>> ans = generate(numRows);
+
+        for (List<Integer> row : ans) {
+            System.out.println(row);
+        }
+    }
+}
